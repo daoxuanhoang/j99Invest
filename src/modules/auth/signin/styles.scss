@@ -1,0 +1,133 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+    .login-left{
+        width: 45%;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+        }
+    }
+
+    .login-right{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .card-login-custom{
+            width: 450px;
+            color: white;
+            font-weight: bold;
+            font-size: 35px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 20px;
+            background-image: url("../../../assets/images/signin/background-login.png");
+
+            .ant-form{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .title{
+                    color: white;
+                    font-size: 20px;
+                    font-weight: normal;
+                    display: flex;
+                    margin-left: 45px;
+                    margin-bottom: 10px;
+                }
+
+                .ant-form-item{
+                    width: 100%;
+                    margin-bottom: 10px;
+
+                    .input-filed-label{
+                        width: 79%;
+                        height: 40px;
+                        border-radius: 10px;
+                        border: none;
+                    }
+                    .ant-form-item-control-input-content {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                .action {
+                    margin-bottom: 30px;
+                    margin-top: 30px;
+                    .primary-button{
+                        width: 79%;
+                        border: none;
+                        border-radius: 10px;
+                        height: 40px;
+                        background: #ED7F00;
+                        color: white;
+                        font-size: 20px;
+                        font-weight: bold;
+                        border: 1px solid white;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .link-href{
+                display: flex;
+                font-size: 20px;
+                justify-content: space-around;
+                width: 100%;
+                margin-bottom: 20px !important;
+
+                .ant-form-item-control{
+                    width: 100%;
+
+                    .ant-form-item-control-input-content{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+
+                        .forgot-button{
+                            font-size: 14px;
+                            color: white;
+                            text-decoration: none;
+                        }
+
+                        .sign-up-link{
+                            font-size: 14px;
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+@media only screen and (max-width:700px) {
+    .login .login-right .card-login-custom .ant-form .title {
+        margin-left: 32px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .login{
+        display: flex;
+        justify-content: center;
+
+        .login-left{
+            display: none;
+        }
+
+        .login-right {
+            width: 80%;
+        }
+    }
+}

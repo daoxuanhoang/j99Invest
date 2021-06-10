@@ -1,0 +1,13 @@
+{
+    "app.name": "J99 Invest",
+    "lang.en": "English",
+    "Email": "Email",
+    "UserName": "UserName",
+    "PassWord": "PassWord",
+    "Confirm.password": "Confirm Password",
+    "Country": "Country",
+    "Phone.number": "Phone Number",
+    "Referral": "Referral",
+    "auth.signup.modal.input.filed.label.username": "User Name",
+    "auth.signup.modal.input.filed.label.password": "Password"
+}
