@@ -1,0 +1,15 @@
+.marquee-token {
+    color: #000000;
+    background: #f8f6f6;
+    box-shadow: 0 1px 6px 0px #dddddd;
+    min-height: 40px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    .marquee-content{
+        .token-item{
+            padding-left: 10px;
+        }
+    }
+  }
+  

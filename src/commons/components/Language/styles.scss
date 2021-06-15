@@ -1,0 +1,37 @@
+@import "../../../assets/css/variables.scss";
+
+//  Lang
+.lang {
+  margin-right: 20px;
+  .lang-reprent {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .ant-select-selector {
+    // display: none;
+
+    color: #fff;
+    background-color: transparent !important;
+    min-width: 120px;
+  }
+  .ant-select-focused {
+    border: none !important;
+    outline-color: inherit;
+    border-color: red;
+  }
+  .ant-select-arrow {
+    // display: none;
+
+    .ant-select-suffix {
+      font-size: 15px !important;
+      color: #fff;
+    }
+  }
+}
+.text-flag {
+  margin-left: 10px;
+}
+.image-flag {
+  width: 20px;
+}

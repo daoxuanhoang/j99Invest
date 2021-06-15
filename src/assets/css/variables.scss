@@ -1,0 +1,141 @@
+$base-font: "HelveticaNeue", sans-serif;
+
+// $aside-menu-background: #f8f6f6 linear-gradient(180deg, #c4f5fb 0%, #ffbcd3 100%);
+$aside-menu-background: #12161c;
+$aside-menu-color: #0a1f3d;
+
+$text-primary-color: #5b337e;
+$success-color: #52c41a;
+
+$header-background: #12161c;
+$sidebar-desktop-background: #12161c;
+
+$header-menu-color: #002aa4;
+
+$gradient-ping-color: rgba(193, 57, 69, 0.5);
+$gradient-violet-color: rgba(142, 17, 35, 0.5);
+$gradient-btn-ping-color: #f54754;
+$gradient-btn-violet-color: #a90d23;
+
+$main-color: #ff9a33;
+$main-color-table: #fff;
+$main-hover-color: #fff;
+$main-font-size-table: 14px;
+
+$main-bg-block: #ff9a33;
+
+$table-bordered-color: #7c5e65;
+$background-modal: #00000030;
+$main-purple: #650100; //text
+
+/*=======================*/
+$box-shadow: 0 0 8px 0px #dddddd;
+$box-shadow-1: 0 0 8px 0px #cab3b3;
+
+/* ======> Modal <======*/
+$modal-bg: #30455d;
+
+$modal-header-text: #ff9a33;
+$modal-body-text: #ff9a33;
+$modal-footer-text: #ff9a33;
+
+$modal-header-bg: #30455d;
+$modal-body-bg: #30455d;
+$modal-footer-bg: #30455d;
+
+$modal-close-x: #fff;
+
+$modal-border: unset;
+$modal-border-line-1: 1px solid #fff;
+$modal-border-line-2: none;
+
+$modal-border-radius: 15px;
+
+/* ======> Text <======*/
+$text: #ff9a33;
+$text-2: #fff;
+$text-3: #000000;
+
+/* ======> Background <======*/
+
+/* ======> Card <======*/
+$main-bg-card: rgba(249, 44, 65, 0.2);
+$main-bg-card-2: rgba(249, 44, 65, 0.2);
+$main-bg-input: rgba(
+  $color: #f92c41,
+  $alpha: 0.3,
+);
+
+$main-radius-card: 5px;
+
+$wallet-border: #efefef;
+$wallet-background: #9f2c4330;
+
+$main-white: #fff;
+
+/* ======> Table <======*/
+$table-text: #ff9a33;
+$table-bg: #fff;
+
+/* ======> Button <======*/
+$button-text: #fff;
+$button-bg: linear-gradient(180deg, #ffbe7b 0%, #ff9a33 100%);
+$button-border: rgba(255, 255, 255, 0.5);
+$button-fontSize: 17px;
+$button-active-text: #fff;
+$button-active-bg: #fff;
+
+$btn-gradient: linear-gradient(180deg, #009ae8 0%, #002aa4 100%);
+$bg-gradient: rgb(85, 36, 81)
+  linear-gradient(90deg, rgba(85, 36, 81, 1) 32%, rgba(128, 51, 104, 1) 52%, rgba(106, 43, 93, 1) 63%, rgba(82, 35, 80, 1) 77%);
+
+$background-input: #15171c;
+
+$input-color: #7b7b7b;
+
+$color-card: #00000030;
+$error-text: #ff7a27;
+$stake-title: #00000030;
+
+/* ======> Input <======*/
+$input-text: #ff7a27;
+$input-bg: #15171c;
+$input-label: #000000;
+$input-border: #ff7a27;
+$input-placeholder: #ff7a27;
+$input-boxShadow: 0 0 1px 2px
+  rgba(
+    $color: $input-border,
+    $alpha: 0.2,
+  );
+
+$input-text-2: #ffffff;
+$input-bg-2: #15171c;
+$input-label-2: #000000;
+$input-border-2: #ff7a27;
+$input-placeholder-2: #ff7a27;
+
+/* =====> Tree color <===== */
+$line-ref-color: rgba(
+  $color: #ff9a33,
+  $alpha: 0.65,
+);
+$box-ref-box-shadow: 10px 10px 25px -10px rgba(0, 0, 0, 50%);
+$box-ref-border: #d9d9d9;
+
+$box-ref-color: rgba(
+  $color: #ff9a33,
+  $alpha: 1,
+);
+$box-ref-color-lv1: rgba(
+  $color: #ff9a33,
+  $alpha: 1,
+);
+$box-ref-color-lv2: rgba(
+  $color: #ff9a33,
+  $alpha: 0.65,
+);
+$box-ref-color-lv3: rgba(
+  $color: #ff9a33,
+  $alpha: 0.45,
+);

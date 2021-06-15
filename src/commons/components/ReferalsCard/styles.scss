@@ -1,0 +1,61 @@
+@import "../../../assets/css/variables.scss";
+$bg-1: rgba(
+  $color: #f92c41,
+  $alpha: 0.3,
+);
+$color-1: #fff;
+
+.card-ref {
+  width: 100%;
+  margin-bottom: 25px !important;
+  .ref-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #dddddd;
+  }
+  .style-input {
+    border-left: 1px solid #dbdbdd;
+    width: 100%;
+
+    .style-input-copy {
+      margin-left: 10px;
+    }
+  }
+  h3,
+  input {
+    color: $color-1 !important;
+  }
+}
+
+//  modal
+.modal-invite {
+  .btn-confirm {
+    margin-top: 23px !important;
+    margin-bottom: 5px;
+  }
+}
+
+.custom-modal {
+  .ant-modal-body {
+  }
+  .form-input-label {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .content {
+    width: 100%;
+    text-align: center;
+    .copy-link {
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+}
+.icon-down {
+  width: 24.75px;
+}

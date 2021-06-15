@@ -1,0 +1,19 @@
+.profile-account {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    line-height: 18px;
+    padding: 1px 15px;
+    .styleName {
+      font-weight: 600;
+    }
+    .logout {
+      font-size: 13px;
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+  .wrapper-image-avatar {
+    margin-left: 4px !important;
+  }
+  

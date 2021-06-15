@@ -1,0 +1,37 @@
+.private-layout-container {
+  min-height: calc(100vh) !important;
+  .content-layout {
+    width: 100%;
+    overflow: hidden;
+
+    .networks-container {
+      width: 100%;
+
+      .networks-content {
+        width: 100%;
+      }
+    }
+  }
+  .wrapper-layout{
+    width: 100%;
+  }
+}
+
+@media (min-width: 767px) {
+  .content-layout {
+    padding: 20px 35px 35px;
+  }
+}
+
+@media (max-width: 830px) {
+  .content-layout {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-layout {
+    padding: 30px 8px;
+    overflow: hidden;
+  }
+}

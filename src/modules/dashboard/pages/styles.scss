@@ -1,0 +1,49 @@
+.item-map {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 20px;
+    margin: auto;
+    max-width: 100%;
+    box-shadow: 0 1px 6px 0px #dddddd;
+    overflow: auto hidden;
+
+    .bounty-item {
+        background-color: #fcf5ee;
+        min-width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        .card-bounty-item {
+            .ant-card-cover {
+                .bounty-item-cover {
+                    margin-right: 10px;
+                    .bounty-item-icon {
+                        width: 40px;
+                    }
+                }
+            }
+            .ant-card-body {
+                text-align: center;
+                .bounty-item-title {
+                    color: #ffa54a;
+                }
+                .bounty-item-price {
+                    color: #53ce76;
+                }
+            }
+        }
+    }
+}
+.networks-ref{
+    width: 100%;
+}
+@media (max-width: 1125px) {
+    .item-map {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        margin-top: 10px;
+        margin-bottom: 24px;
+    }
+}

@@ -1,0 +1,417 @@
+@import "./mixin.scss";
+@import "./variables.scss";
+
+$listMarginTop: (
+  mt-3: 3px,
+  mt-5: 5px,
+  mt-10: 10px,
+  mt-20: 20px,
+  mt-30: 30px,
+  mt-40: 40px,
+  mt-50: 50px,
+  mt-60: 60px,
+);
+
+$listMarginBottom: (
+  mb-3: 3px,
+  mb-10: 10px,
+  mb-15: 15px,
+  mb-20: 20px,
+  mb-30: 30px,
+  mb-40: 40px,
+);
+
+$listMarginLeft: (
+  ml-3: 3px,
+  ml-5: 5px,
+  ml-10: 10px,
+  ml-20: 20px,
+  ml-30: 30px,
+  ml-40: 40px,
+);
+$listMarginRight: (
+  mr-1: 1px,
+  mr-2: 2px,
+  mr-3: 3px,
+  mr-5: 5px,
+  mr-7: 7px,
+  mr-8: 8px,
+  mr-10: 10px,
+  mr-15: 15px,
+  mr-20: 20px,
+  mr-30: 30px,
+  mr-40: 40px,
+);
+
+$listWidth: (
+  w-10: 10px,
+  w-20: 20px,
+  w-30: 30px,
+  w-40: 40px,
+  w-10pc: 10%,
+  w-20pc: 20%,
+  w-30pc: 30%,
+  w-100pc: 100%,
+  w-10vw: 10vw,
+  w-20vw: 20vw,
+  w-30vw: 30vw,
+);
+
+$listHeight: (
+  h-10: 10px,
+  h-20: 20px,
+  h-30: 30px,
+  h-40: 40px,
+);
+
+$listPositionText: (
+  t-center: center,
+  t-right: right,
+  t-left: left,
+);
+
+$listBorderRadius: (
+  border-radius-5: 5px,
+  border-radius-10: 10px,
+  border-radius-15: 15px,
+  border-radius-20: 20px,
+);
+
+@include create-class($attribute: "text-align", $list: $listPositionText);
+@include create-class($attribute: "margin-top", $list: $listMarginTop);
+@include create-class($attribute: "margin-bottom", $list: $listMarginBottom);
+@include create-class($attribute: "margin-left", $list: $listMarginLeft);
+@include create-class($attribute: "margin-right", $list: $listMarginRight);
+@include create-class($attribute: "width", $list: $listWidth);
+@include create-class($attribute: "height", $list: $listHeight);
+@include create-class($attribute: "border-radius", $list: $listBorderRadius);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../css/fonts/HelveticaNeue.ttf") format("truetype");
+}
+
+.ant-layout {
+  min-height: calc(100vh - 70px) !important;
+  header {
+    background: $aside-menu-color !important;
+  }
+  color: $text-3;
+  background: #f8f6f6;
+
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+body {
+  font-family: $base-font;
+  font-size: 16px;
+  .ant-card {
+    border-radius: 5px;
+    background: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: rgba(249, 174, 46, 20%) 0px 0px 5px inset;
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(249, 174, 46);
+  border-radius: 8px;
+}
+/* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #555;
+// }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  transition: all 5000s ease-in-out 0s;
+  transition-property: background-color, color;
+}
+
+// Custom Class
+.progress-wrapper {
+  height: 0.2rem;
+  .loader-60devs {
+    z-index: 10051;
+  }
+  .loader-60devs .loader-60devs-progress {
+    height: 0.2rem;
+    width: 100%;
+    background-color: $aside-menu-background;
+  }
+  .loader-60devs::before {
+    display: none;
+  }
+}
+
+// label custom css
+.label-custom {
+  margin-bottom: 9px;
+  color: rgba(0, 0, 0, 0.85);
+  .label-require::before {
+    display: inline-block;
+    margin-right: 4px;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-family: $base-font;
+    line-height: 1;
+    content: "*";
+  }
+}
+
+// loading
+.loader {
+  .ant-spin-dot {
+    font-size: 40px;
+  }
+  position: fixed;
+  background: rgba(181, 188, 199, 0.4);
+  z-index: 9999;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-loading {
+  width: 207.35px;
+}
+
+.image-preloader {
+  width: 150px;
+  animation: spin 1s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+}
+
+.d-flex {
+  display: flex;
+}
+.d-flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.ant-modal-content {
+  border: $modal-border;
+  border-radius: $modal-border-radius;
+  overflow: hidden;
+}
+.ant-modal-header {
+  background: $modal-header-bg;
+  border-bottom: $modal-border-line-1;
+}
+.ant-modal-body {
+  background: $modal-body-bg;
+  padding: 15px 24px 14px;
+  .ant-select-selector,
+  input {
+    height: 50px;
+    border-radius: 4px;
+  }
+  label,
+  .lable-form {
+    color: $modal-body-text;
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
+  .btn-confirm {
+    margin-top: 17px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: $modal-header-text;
+    box-shadow: 0 0 15px $modal-header-text;
+    cursor: pointer;
+    button {
+      padding: 2px 10px;
+      color: #fff;
+      height: 100%;
+      font-size: 27px;
+      background: unset;
+      border: unset;
+      &:valid,
+      &:hover,
+      &:active {
+        overflow: hidden;
+      }
+    }
+  }
+}
+.ant-modal-footer {
+  background: $modal-body-bg;
+  padding: 10px 24px 10px !important;
+  cursor: pointer;
+  border: unset;
+  button {
+    color: #fff;
+    background-color: $modal-header-text;
+
+    font-size: inherit;
+    text-align: center;
+    padding: 0;
+    height: unset;
+    border: unset;
+    outline: unset;
+    cursor: pointer;
+    &:active,
+    &:focus,
+    &:valid,
+    &:hover {
+      color: inherit;
+      background-color: inherit !important;
+    }
+  }
+  .modal-footer-label {
+    color: #fff;
+    font-size: 23px;
+    text-align: center;
+    padding: 0px 0px;
+    margin-top: 0px !important;
+  }
+}
+
+.ant-input {
+  border-radius: 4px;
+}
+
+.text-success-color {
+  color: $success-color;
+}
+
+// hidden on mobile
+@media only screen and (max-width: 1170px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+}
+
+.table-ant-custom {
+  .ant-table-content {
+    overflow: auto;
+  }
+}
+
+.pega-content-title {
+  font-family: $base-font;
+  font-size: 30px;
+  color: #fff;
+}
+
+.transfer-custom {
+  .ant-modal-content {
+    border: none;
+  }
+}
+
+.ant-card-body {
+  padding: 0;
+}
+.ant-card-head {
+  border-bottom: none;
+  min-height: 35px;
+}
+.ant-card-bordered {
+  border: none;
+}
+
+.cursor {
+  cursor: pointer !important;
+}
+.cusor-not-allowed {
+  cursor: not-allowed !important;
+}
+.flex-betwen {
+  display: flex;
+  justify-content: space-between;
+}
+.box-err {
+  padding: 15px 5px 0;
+  color: yellow;
+  font-size: 14px;
+  text-align: center;
+}
+hr.hr {
+  border-color: rgba($color: red, $alpha: 0.2);
+}
+
+@media (min-width: 1200px) {
+  .col-xl-5 {
+    display: block;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+.ant-tooltip {
+  display: none !important;
+}

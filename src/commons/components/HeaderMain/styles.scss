@@ -1,0 +1,162 @@
+@import "../../../assets/css/variables.scss";
+
+.header-container.ant-layout-header {
+  background: $header-background !important;
+  line-height: 0 !important;
+  height: 70px !important;
+  padding: 0 !important;
+  .ant-progress-text {
+    display: none;
+  }
+  .ant-progress-inner {
+    color: #fff;
+  }
+  .ant-progress-outer {
+    width: 300px;
+    margin-left: 216px;
+    .ant-progress-inner,
+    .ant-progress-success-bg,
+    .ant-progress-bg {
+      border-radius: 0;
+    }
+    .ant-progress-success-bg {
+      background-color: #1d5ece !important;
+    }
+    .ant-progress-bg {
+      background-color: #3bde41 !important;
+    }
+    span {
+      font-size: 11px !important;
+      position: absolute;
+      padding: 0 2px;
+    }
+    .right-progress {
+      right: 0;
+    }
+  }
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    .icon-shopping {
+      font-size: 24px;
+    }
+    span {
+      font-size: 18px;
+    }
+    .styleName {
+      font-size: larger;
+      font-weight: bold;
+    }
+  }
+  .col-left {
+    display: flex;
+    .close-mobile {
+      margin: auto 0;
+    }
+    .content-nav {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+    }
+  }
+  .col-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .title-header {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    float: left;
+    span {
+      font-size: 18px;
+    }
+  }
+  .image-avatar {
+    border-radius: 50%;
+    margin-left: 5px;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (max-width: 998px) {
+  .title-header {
+    display: none !important;
+  }
+}
+
+.box-interest {
+  padding: 6px 25px;
+  background-color: rgba($color: #ffffff, $alpha: 0.1);
+  border-radius: 5px;
+  font-weight: 600;
+  display: flex;
+  height: fit-content;
+  line-height: 26px;
+  .percent {
+    color: #0cf520;
+    margin-left: 10px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-interest {
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 425px) {
+  .content-nav {
+    margin-left: 10px !important;
+  }
+  .box-interest {
+    padding: 3px 10px;
+    font-size: 12px !important;
+    display: block;
+    line-height: 14px;
+    text-align: center;
+    .percent {
+      margin-left: 2px;
+      margin-top: 2px;
+    }
+  }
+}
+
+// Token balance
+.token-block {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  .token-item {
+    background: $main-bg-block;
+    display: flex;
+    align-items: center;
+
+    padding: 9px 12px;
+    border-radius: 5px;
+  }
+  .token-balance {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .header-container.ant-layout-header .content-header span {
+    font-size: 13px;
+  }
+  .token-block {
+    .token-item {
+      padding: 8px 8px;
+    }
+  }
+}
