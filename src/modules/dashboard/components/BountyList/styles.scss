@@ -1,7 +1,29 @@
+@import "assets/css/variables";
+.card-item-reviews {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  background: #fcf5ee !important;
+  padding: 10px !important;
+  margin: 10px !important;
+  cursor: pointer;
 
-.card-bounty-item {
+  .card-item-cover {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    img {
+      width: 65%;
+    }
+  }
+  .ant-card-body {
+    text-align: center;
+
+    .card-item-title {
+      color: #ffa74e;
+    }
+    .card-item-price {
+      color: #31c45b;
+    }
+  }
 }

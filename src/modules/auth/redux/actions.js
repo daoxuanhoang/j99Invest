@@ -20,3 +20,9 @@ export const updateToggleAuthyModal = (payload) => ({
     type: types.TOGGLE_AUTHY_MODAL,
     payload,
   });
+
+export const postSignup = (payload, redirect) => ({
+    type: types.SIGNUP,
+    payload,
+    redirect,
+})

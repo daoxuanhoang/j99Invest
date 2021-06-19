@@ -1,0 +1,115 @@
+@import "assets/css/variables";
+.card-buy-offer {
+  max-width: 450px;
+  margin: auto !important;
+  padding: 20px !important;
+  background: white !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 8px 0px #dddddd;
+
+  .ant-card-head {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px 30px 0px;
+    .ant-card-head-wrapper {
+      .ant-card-head-title {
+        background: $button-bg;
+        border-radius: 5px;
+        color: white;
+        width: 170px;
+        text-align: center;
+        font-size: 20px;
+        padding: 10px;
+      }
+    }
+  }
+  .ant-card-body {
+    .buy-offer-form {
+      .buy-offer-select {
+        margin-bottom: 20px;
+        .ant-select-selector {
+          border: 1px solid #ff9933;
+          border-radius: 5px;
+          height: 52px;
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          color: #ff9933;
+        }
+
+        .ant-select-arrow {
+          color: #ff9933;
+        }
+      }
+      .buy-offer-select::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        right: 45%;
+        top: 75px;
+        border-bottom: 3px solid #ff9933;
+      }
+      .input-filed-label {
+        color: #ff9933;
+        font-size: 20px;
+      }
+      .ant-form-item {
+        .ant-form-item-control {
+          .ant-form-item-control-input {
+            .ant-form-item-control-input-content {
+              .input-filed {
+                border: none;
+                background-color: #fff1e2;
+                color: #ff9933;
+                height: 52px;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+      .buy-action {
+        padding-top: 10px;
+        display: flex;
+        width: 100%;
+
+        .ant-btn {
+          width: 100%;
+          border-radius: 5px;
+          color: white;
+          background: linear-gradient(180deg, #ffbe7b 0%, #ff9a33 100%);
+          font-weight: bold;
+          font-size: 18px;
+          padding: 10px 0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 52px;
+        }
+      }
+    }
+  }
+}
+
+.buy-offer-containers {
+  max-width: 950px;
+  margin: auto;
+  padding-top: 40px;
+}
+.buy-offer-box {
+  display: flex;
+  justify-content: space-evenly !important;
+}
+.ant-select-item-option-content {
+  color: #ff9933;
+}
+
+.amount-label {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.ant-modal-close-icon {
+  color: #ff9933 !important;
+}

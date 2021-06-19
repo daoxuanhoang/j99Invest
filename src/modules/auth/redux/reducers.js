@@ -16,7 +16,6 @@ export default function AuthReducer(state = initialState, action) {
     return produce(state, (draft) => {
         switch (action.type) {
             case types.LOGIN_SUCCESS:
-                console.log(payload);
                 draft.userInfo = payload;
                 break;
         

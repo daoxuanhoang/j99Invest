@@ -34,7 +34,6 @@ const initialState = {
   banks: [],
   isOpenBankDialog: false,
 };
-
 const updateUserInfoToLocal = (userInfo) => {
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
 };
@@ -143,7 +142,6 @@ export default (state = initialState, action) => {
         ["order"],
         ["asc"]
       );
-
       return {
         ...state,
         profileData: {

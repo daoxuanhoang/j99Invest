@@ -27,6 +27,7 @@ const Index = ({ className, title, code, setShowModalInvite = () => {}, disabled
                                 <Input
                                     readOnly
                                     suffix={<img className="icon-copy" src={Path} alt="..."/>}
+                                    value={code}
                                 />
                                 {copySuccess && (
                                     <div className="copy-success">

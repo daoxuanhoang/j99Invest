@@ -1,0 +1,135 @@
+@import "assets/css/variables";
+
+.wallet-custom {
+  .ant-modal-content {
+    .ant-modal-close {
+      .ant-modal-close-x {
+        color: $modal-close-x;
+      }
+    }
+    .ant-modal-header {
+      font-size: 20px;
+      font-weight: 400;
+      .ant-modal-title {
+        font-size: 20px;
+        color: $main-color;
+      }
+    }
+    .ant-modal-body {
+    }
+    .ant-modal-footer {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      .btn-submit {
+        height: auto;
+        font-size: 27px;
+        color: $main-color;
+        padding: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.send-modal {
+  position: relative;
+  .scan {
+    border-left: 1px solid #c0bdbd;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    z-index: 1000;
+    padding: 7px 8px;
+    background-color: #fafafa;
+  }
+}
+
+.modal-content-success {
+  padding: 20px;
+  min-height: 200px;
+  text-align: center;
+}
+
+// ======> Modal deponsit
+.deponsit-modal {
+  .address-copy {
+    padding-bottom: 20px;
+    .ant-input-affix-wrapper {
+      color: #fff;
+      background: rgba($color: #dddddd, $alpha: 0.1);
+      border: 1px solid #fff;
+      input {
+        height: 40px;
+      }
+    }
+  }
+}
+
+// ======> Modal Swap
+.modal-swap {
+  .info-swap {
+    display: block;
+    color: #fff;
+    font-size: 17px;
+  }
+}
+.swap-form {
+  .ant-input {
+    font-size: 20px;
+  }
+  .ant-form-item {
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+  }
+  .item-1 {
+    position: relative;
+    input {
+      padding: 0 10px !important;
+    }
+  }
+}
+
+.box-select {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px 0 20px;
+  width: 100%;
+  z-index: 1;
+  color: #000000;
+  background-color: #fff;
+}
+
+.modal-form {
+  .ant-form-item-control-input-content {
+    color: #fff;
+    background: rgba($color: #dddddd, $alpha: 0.1);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    .ant-input-group-addon,
+    .ant-input-affix-wrapper {
+      background: unset;
+      border: unset;
+    }
+    input {
+      color: #fff;
+      background: unset;
+      border: unset;
+      &:hover,
+      &:focus,
+      &:valid,
+      &:active {
+        border: unset;
+        outline: unset;
+        box-shadow: unset;
+      }
+    }
+  }
+
+  .ant-form-item-control-input-content:focus-within {
+    box-shadow: 0 0 5px 0px #ababab;
+  }
+}

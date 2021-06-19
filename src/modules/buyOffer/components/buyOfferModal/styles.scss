@@ -1,0 +1,45 @@
+@import "assets/css/variables";
+.btn-confirm-tran {
+  background: linear-gradient(180deg, #ffbe7b 0%, #ff9a33 100%) !important;
+  color: white !important;
+  border: none !important;
+}
+.btn-confirm-tran:hover,
+.btn-confirm-tran:focus {
+  background: #fff;
+  border-color: unset !important;
+  box-shadow: unset !important;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: unset !important;
+}
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-color: unset !important;
+  border-right-width: 1px !important;
+  outline: 0;
+  box-shadow: unset !important;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  border-color: unset !important;
+  outline: unset;
+  box-shadow: unset !important;
+}
+
+.ant-btn:hover,
+.ant-btn:focus,
+.ant-btn:active {
+  border-color: unset !important;
+}
+
+.buy-offer-content {
+  p {
+    color: white !important;
+  }
+}
+.ant-modal-title {
+  color: #ff9a33 !important;
+  font-size: 20px !important;
+}

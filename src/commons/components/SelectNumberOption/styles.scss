@@ -1,0 +1,18 @@
+.button-action-amount {
+  margin-left: 17px;
+  button {
+    width: 50px;
+    height: 24px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    padding: 0 6px;
+    border-radius: 5px;
+    color: #ffffff;
+    border: 1px solid #dddddd;
+    background: rgba(221, 221, 221, 0.1);
+  }
+  button:first-child {
+    margin-left: 0;
+  }
+}

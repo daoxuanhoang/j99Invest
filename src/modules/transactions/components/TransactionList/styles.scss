@@ -1,0 +1,119 @@
+@import "assets/css/variables";
+.COMPLETED-status {
+  span {
+    color: $success-color;
+  }
+}
+.PENDING_REVIEW-status,
+.PENDING_VERIFY_CODE-status {
+  color: $error-text;
+  border: 1px solid $wallet-border;
+  border-radius: 13px;
+  padding: 5px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.FAILED-status,
+.CANCEL-status {
+  color: $error-text;
+}
+
+.PENDING-status,
+.VERIFIED-status {
+  span {
+    color: #ff7a27;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 10px;
+    display: block;
+  }
+}
+.wrapper-status-btn {
+  display: flex;
+  justify-content: left;
+}
+.cancel-action {
+  color: #e1e1e1;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.transaction-table {
+  .ant-table-cell {
+    font-size: 13px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    .text-left {
+      .status {
+        margin: 0 5px;
+      }
+      .btn-transaction {
+        margin: 0 5px;
+        button {
+          min-width: 85px;
+        }
+      }
+    }
+  }
+
+  .ant-pagination-item-active {
+    border-color: $table-text;
+    a {
+      color: $table-text;
+    }
+  }
+
+  .primary-button {
+    border-color: $main-color;
+    border-width: 1px;
+    color: $main-color;
+    font-size: 14px;
+    font-weight: bold;
+    &:hover,
+    &:focus {
+      background-color: rgba($color: $modal-bg, $alpha: 0.6);
+      border-color: $main-color;
+    }
+  }
+}
+
+.custom-confirm {
+  .ant-modal-confirm-body {
+    .ant-modal-confirm-content {
+      color: $main-color;
+    }
+  }
+  .ant-modal-confirm-body-wrapper {
+    .ant-modal-confirm-btns {
+      .ant-btn {
+        background-color: $modal-bg;
+        border-color: $main-color;
+        border-width: 1px;
+        color: $main-color;
+        font-size: 14px;
+        font-weight: bold;
+        &:hover,
+        &:focus {
+          background-color: rgba($color: $modal-bg, $alpha: 0.6);
+        }
+      }
+      .ant-btn-primary {
+        text-align: center;
+        border-radius: 6px;
+        background: $modal-header-text;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          background-color: rgba($color: $modal-header-text, $alpha: 1);
+        }
+      }
+    }
+  }
+}
+.transaction-list {
+  .ant-select-selector {
+    background-color: transparent !important;
+    color: $text;
+  }
+}

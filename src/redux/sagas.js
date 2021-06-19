@@ -1,14 +1,20 @@
 import { all } from "@redux-saga/core/effects";
-import  authSaga  from "../modules/auth/redux/sagas";  
 import { DashboardSaga } from "../modules/dashboard"; 
 import { BountySpwSaga } from "../modules/bountySPW";
 import { NetwordSaga } from "../modules/networks";
+import { AuthSaga } from "../modules/auth";
+import { ProfileSaga } from "../modules/profile";
+import { TransactionSaga } from "../modules/transactions";
+import { BuyOfferSaga } from "modules/BuyOffer";
 
 export default function* rootSaga() {
  yield all([
-     authSaga(),
+     AuthSaga(),
      DashboardSaga(),
      BountySpwSaga(),
      NetwordSaga(),
+     ProfileSaga(),
+     TransactionSaga(),
+     BuyOfferSaga(),
  ]);
 }

@@ -25,7 +25,7 @@ import {
   updateEmailSuccess,
 } from "./actions";
 import fetchHelper from "../../../helpers/FetchHelper";
-import { loginSuccess, updateToggleAuthyModal } from "modules/auth/redux/actions";
+import { loginSuccess, updateToggleAuthyModal } from "../../../modules/auth/redux/actions";
 function* getProfile() {
   try {
     const response = yield call(getProfileApi);

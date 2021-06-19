@@ -3,12 +3,18 @@ import { Link, useLocation } from "react-router-dom";
 import { Layout, Menu, Drawer, Button } from "antd";
 import { FormattedMessage } from "react-intl";
 import cn from "classnames";
+
 import "./styles.scss";
-import Language from "../../components/Language/index";
-import ProfileAccount from "../ProfileAccount/index";
-import { ROUTE } from "../../constants/index";
-import dashboard from "../../../assets/images/itemMenus/dashboard.png";
-import logo from "../../../assets/images/logo/logo.png";
+import Language from "commons/components/Language";
+import ProfileAccount from "commons/components/ProfileAccount";
+import { ROUTE } from "commons/constants";
+import logo from "assets/images/logo/logo.png";
+import DashBoardIcon from "assets/images/iconMenu/dashboard.png";
+import MyBalanceIcon from "assets/images/iconMenu/wallet.png";
+import BuyOfferIcon from "assets/images/iconMenu/network.png";
+import BountySpwIcon from "assets/images/iconMenu/bounty.png";
+import NetWorkIcon from "assets/images/iconMenu/refferal.png";
+import SettingIcon from "assets/images/iconMenu/setting.png";
 const { Sider } = Layout;
 
 const rootSubMenuKeys = ["_myTransaction"];
@@ -17,49 +23,42 @@ const CLASS_ACTIVE_MENU = "ant-menu-item-selected";
 const itemMenu = [
   {
     id: 1,
-    icon: dashboard,
+    icon: DashBoardIcon,
     title: <FormattedMessage id={"menu.dashboard"} />,
     link: ROUTE.DASHBOARD,
     subMenu: [],
   },
   {
     id: 2,
-    icon: dashboard,
+    icon: MyBalanceIcon,
     title: <FormattedMessage id={"menu.myBalance"} />,
     link: ROUTE.MY_BALANCE,
     subMenu: [],
   },
   {
     id: 3,
-    icon: dashboard,
+    icon: BuyOfferIcon,
     title: <FormattedMessage id={"menu.buyOffer"} />,
     link: ROUTE.BUY_OFFER,
     subMenu: [],
   },
-  // {
-  //   id: 4,
-  //   icon: require("assets/images/iconMenu/game.png"),
-  //   title: <FormattedMessage id={"menu.staking"} />,
-  //   link: ROUTE.STAKING,
-  //   subMenu: [],
-  // },
   {
-    id: 5,
-    icon: dashboard,
+    id: 4,
+    icon: BountySpwIcon,
     title: <FormattedMessage id={"menu.bountySPW"} />,
     link: `${ROUTE.BOUNTY_SPW}`,
     subMenu: [],
   },
   {
-    id: 6,
-    icon: dashboard,
+    id: 5,
+    icon: NetWorkIcon,
     title: <FormattedMessage id={"menu.referral"} />,
     link: `${ROUTE.NETWORKS}${ROUTE.NETWORKS_REFERALS}`,
     subMenu: [],
   },
   {
-    id: 7,
-    icon: dashboard,
+    id: 6,
+    icon: SettingIcon,
     title: <FormattedMessage id={"menu.setting"} />,
     link: `${ROUTE.SETTING}${ROUTE.SETTING_PERSONAL}`,
     subMenu: [],

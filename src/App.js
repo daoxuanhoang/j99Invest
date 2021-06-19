@@ -14,6 +14,8 @@ import { ROUTE, TOKEN } from "./commons/constants/index";
 import { SignInPage, SignUpPage } from "./modules/auth/index";
 import DashboadPage from "./modules/dashboard/index";
 import { getRate } from "./modules/dashboard/redux/actions";
+import { WalletPage } from "modules/wallets";
+import { BuyOfferPage } from "modules/BuyOffer";
 
 const isLogin = () => {
   const authToken = Cookies.get(TOKEN);
@@ -52,7 +54,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
         ) : (
           <Redirect
             to={{
-              pathname: `${ROUTE.SIGNIN}`,
+              pathname: `${ROUTE.LOGIN}`,
               state: { from: props.location },
             }}
           />
@@ -93,16 +95,20 @@ const App = () => {
           <Spin size="large" />
         </div>
       )}
-      <IntlProvider locale={activeLanguage} messages={messagesListLanguage[activeLanguage]}>
+      <IntlProvider 
+      locale={activeLanguage} messages={messagesListLanguage[activeLanguage]}
+      >
         <Router>
           {/* Exact */}
           <PrivateRoute exact path={ROUTE.DASHBOARD} component={DashboadPage} />
+          <PrivateRoute exact path={ROUTE.MY_BALANCE} component={WalletPage} />
+          <PrivateRoute exact path={ROUTE.BUY_OFFER} component={BuyOfferPage} />
 
           {/* No Exact */}
 
           {/* Public */}
-          <PublicRoute exact path={ROUTE.SIGNIN} component={SignInPage} />
-          <PublicRoute exact path={ROUTE.SIGNUP} component={SignUpPage} />
+          <PublicRoute  path={ROUTE.LOGIN} component={SignInPage} />
+          <PublicRoute  path={ROUTE.SIGNUP} component={SignUpPage} />
         </Router>
       </IntlProvider>
     </div>

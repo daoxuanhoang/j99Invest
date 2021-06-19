@@ -14,7 +14,7 @@ const Index = ({ intl }) => {
   const dispatch = useDispatch();
   const userInfo = useSelector((state) => state.profile.profileData);
   const [showModalInvite, setShowModalInvite] = useState(false);
-
+  // Handle ref
   const link = `${process.env.REACT_APP_USER_URL}/signup?sponsorkey=${get(userInfo, "sponsorKey")}`;
   const [refCode, setRefCode] = useState("");
   const [orderCode, setOrderCode] = useState("");
@@ -28,10 +28,27 @@ const Index = ({ intl }) => {
       setOrderCode(get(userInfo, "sponsorKey"));
     }
   }, [intl, link, userInfo]);
-
+  // End Handle ref
 
   const onCloseModalInvite = () => {
     setShowModalInvite(false);
+  };
+
+  const onInviteFriend = (values) => {
+    dispatch(
+      inviteFriend(values, () => {
+        onCloseModalInvite();
+      })
+    );
+  };
+
+  const copyReferralLink = (code) => {
+    navigator.clipboard.writeText(code);
+    toast(
+      `${intl.formatMessage({
+        id: "setting.invite.modal.messageCopyLink",
+      })} ${code}`
+    );
   };
 
   return (
@@ -43,6 +60,7 @@ const Index = ({ intl }) => {
               <img className="mr-5" src={person} width={30} height={30} />
               <InputCopy
                 code={refCode}
+                // accessCopy={userInfo?.invest_stake >= MIN_STAKE_OF_REF}
                 link={userInfo?.invest_stake < MIN_STAKE_OF_REF ? "/stake" : null}
               />
             </div>

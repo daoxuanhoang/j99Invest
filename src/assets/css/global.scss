@@ -1,5 +1,5 @@
-@import "./mixin.scss";
-@import "./variables.scss";
+@import "assets/css/variables";
+@import "assets/css/mixin";
 
 $listMarginTop: (
   mt-3: 3px,
@@ -93,11 +93,10 @@ $listBorderRadius: (
 
 @font-face {
   font-family: "HelveticaNeue";
-  src: url("../css/fonts/HelveticaNeue.ttf") format("truetype");
+  src: url("../fonts/HelveticaNeue.ttf") format("truetype");
 }
 
 .ant-layout {
-  min-height: calc(100vh - 70px) !important;
   header {
     background: $aside-menu-color !important;
   }

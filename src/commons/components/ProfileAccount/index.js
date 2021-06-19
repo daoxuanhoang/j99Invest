@@ -17,7 +17,7 @@ const ProfileAccount = ({ className = "", showInfo }) => {
   const handleLogout = () => {
     Cookies.remove("token");
     localStorage.removeItem(USER_INFO_KEY);
-    window.location.href = window.location.origin + ROUTE.SIGNIN;
+    window.location.href = window.location.origin + ROUTE.LOGIN;
   };
 
   const menu = (
