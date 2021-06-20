@@ -1,0 +1,24 @@
+@import "assets/css/variables";
+
+.blog-page {
+  color: $main-color;
+  .blog-header {
+    h1 {
+      color: inherit;
+      font-size: 27px;
+      font-weight: 600;
+    }
+  }
+  .blog-content {
+    background: #ffffff;
+    box-shadow: 0 0 7px 0 rgba($color: #000000, $alpha: 0.1);
+    padding: 25px;
+    border-radius: 7px;
+    ul {
+      list-style: none;
+      li {
+        line-height: 33px;
+      }
+    }
+  }
+}

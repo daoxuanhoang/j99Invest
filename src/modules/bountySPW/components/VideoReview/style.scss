@@ -1,0 +1,30 @@
+@import "assets/css/variables";
+
+.videoReview-page {
+  color: $main-color;
+  .header {
+    h1 {
+      color: inherit;
+      font-size: 27px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    p {
+      color: inherit;
+      margin-bottom: 0;
+    }
+  }
+  .content {
+    background: #ffffff;
+    box-shadow: 0 0 7px 0 rgba($color: #000000, $alpha: 0.1);
+
+    padding: 25px;
+    border-radius: 7px;
+    ul {
+      list-style: none;
+      li {
+        line-height: 33px;
+      }
+    }
+  }
+}

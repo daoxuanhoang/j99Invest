@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Layout } from "antd";
 import * as Cookies from "js-cookie";
 
-import "./stylePrivate.scss";
-import MainSideBar from "../components/MainSideBar/index";
-import HeaderMain from "../components/HeaderMain/index";
-import MarqueeTokenBalance from "../components/MarqueeTokenBalance/index";
+import "./private.scss";
+import MainSideBar from "commons/components/MainSideBar";
+import HeaderMain from "commons/components/HeaderMain";
+import MarqueeTokenBalance from "commons/components/MarqueeTokenBalance";
 
-import { ROUTE, USER_INFO_KEY } from "../constants/index";
+import { ROUTE, USER_INFO_KEY } from "commons/constants";
 
 const PrivateLayout = ({ children }) => {
   const [openKeys, setOpenKeys] = useState([]);

@@ -43,7 +43,6 @@ const Wallet = ({ intl, item, walletType, onloadWallet = () => {} }) => {
   };
 
   const handleChangeUnit = (item) => {
-    console.log(item);
     const { unit } = item || { unit: "" };
     onloadWallet(unit);
     dispatch(

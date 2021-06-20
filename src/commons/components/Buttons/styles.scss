@@ -1,0 +1,49 @@
+@import "assets/css/variables";
+
+$text: #000000;
+$bg: #e4e4e4;
+$box-shadow: 0 -1px 3px 0 #999999;
+
+.button-main {
+  color: $button-text;
+  background: $button-bg;
+  border: 1px solid $button-border;
+
+  cursor: pointer;
+
+  font-size: $button-fontSize;
+  min-width: 100px;
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+
+.btn-item {
+  background-color: $bg;
+  box-shadow: $box-shadow;
+
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+  padding: 11px 2px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  .btn-icon {
+    padding-bottom: 10px;
+  }
+  .btn-body {
+    color: $text;
+    p {
+      color: $text;
+      font-family: $base-font;
+      line-height: 12px;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    span {
+      color: $text;
+      font-family: $base-font;
+      font-size: 12px;
+    }
+  }
+}

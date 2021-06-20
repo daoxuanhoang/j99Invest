@@ -4,7 +4,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Input } from "antd";
 import "./styles.scss";
 import { Link } from "react-router-dom";
-import Path from "../../../../assets/images/Path.png";
+import Path from "assets/images/Path.png";
 
 
 const Index = ({ className, title, code, setShowModalInvite = () => {}, disabled, accessCopy = true, link }) => {

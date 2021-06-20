@@ -1,0 +1,25 @@
+@import "assets/css/variables";
+
+.custom-textarea {
+  font-size: 15px !important;
+  color: $input-text !important;
+  border-color: $input-border !important;
+}
+.custom-textarea:focus,
+.custom-textarea.ant-input-focused {
+  box-shadow: $input-boxShadow !important;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+textarea.custom-textarea::placeholder {
+  color: $input-placeholder;
+  opacity: 1; /* Firefox */
+}
+/* Internet Explorer 10-11 */
+textarea.custom-textarea:-ms-input-placeholder {
+  color: $input-placeholder;
+}
+/* Microsoft Edge */
+textarea.custom-textarea::-ms-input-placeholder {
+  color: $input-placeholder;
+}

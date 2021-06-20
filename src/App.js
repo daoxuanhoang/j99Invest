@@ -6,16 +6,18 @@ import { ToastContainer } from "react-toastify";
 import { Spin } from "antd";
 import Cookies from "js-cookie";
 
-import { messagesListLanguage } from "./language/config";
-import fetchHelper from "./helpers/FetchHelper";
-import { getProfile } from "./modules/profile/redux/actions";
-import { PrivateLayout, PublicLayout } from "./commons/layouts/index";
-import { ROUTE, TOKEN } from "./commons/constants/index";
-import { SignInPage, SignUpPage } from "./modules/auth/index";
-import DashboadPage from "./modules/dashboard/index";
-import { getRate } from "./modules/dashboard/redux/actions";
+import { messagesListLanguage } from "language/config";
+import fetchHelper from "helpers/FetchHelper";
+import {  } from "modules/dashboard";
 import { WalletPage } from "modules/wallets";
 import { BuyOfferPage } from "modules/BuyOffer";
+import { DashboardPage } from "modules/dashboard";
+import { getProfile } from "modules/profile/redux/actions";
+import { PrivateLayout, PublicLayout } from "commons/layouts";
+import { ROUTE, TOKEN} from "commons/constants";
+import { SignInPage, SignUpPage } from "modules/auth";
+import { getRate } from "modules/dashboard/redux/actions";
+import BountyPage from "modules/bountySPW";
 
 const isLogin = () => {
   const authToken = Cookies.get(TOKEN);
@@ -95,20 +97,19 @@ const App = () => {
           <Spin size="large" />
         </div>
       )}
-      <IntlProvider 
-      locale={activeLanguage} messages={messagesListLanguage[activeLanguage]}
-      >
+      <IntlProvider locale={activeLanguage} messages={messagesListLanguage[activeLanguage]}>
         <Router>
           {/* Exact */}
-          <PrivateRoute exact path={ROUTE.DASHBOARD} component={DashboadPage} />
+          <PrivateRoute exact path={ROUTE.DASHBOARD} component={DashboardPage} />
           <PrivateRoute exact path={ROUTE.MY_BALANCE} component={WalletPage} />
           <PrivateRoute exact path={ROUTE.BUY_OFFER} component={BuyOfferPage} />
+          
 
-          {/* No Exact */}
-
+          {/* No Exact */}  
+          <PrivateRoute path={ROUTE.BOUNTY_SPW} component={BountyPage} />
           {/* Public */}
-          <PublicRoute  path={ROUTE.LOGIN} component={SignInPage} />
-          <PublicRoute  path={ROUTE.SIGNUP} component={SignUpPage} />
+          <PublicRoute exact path={ROUTE.LOGIN} component={SignInPage} />
+          <PublicRoute exact path={ROUTE.SIGNUP} component={SignUpPage} />
         </Router>
       </IntlProvider>
     </div>

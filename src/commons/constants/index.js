@@ -6,7 +6,7 @@ export const TRONSCAN_TRANSACTION = "https://tronscan.org/#/transaction";
 
 export const ROUTE_REPORT = "/report";
 export const ROUTE = {
-  DASHBOARD: "/",
+  DASHBOARD: "/dashboard",
   MY_BALANCE: "/my-balance",
 
   BOUNTY_SPW: "/bounty-spw",

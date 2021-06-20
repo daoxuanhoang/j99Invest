@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "react-toastify/dist/ReactToastify.css";
 import "antd/dist/antd.css";
-import "./assets/css/global.scss";
+import "assets/css/global.scss";
 
 const initialState = {};
 const store = configureStore(initialState);

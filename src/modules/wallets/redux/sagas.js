@@ -64,7 +64,7 @@ function requestGetIsInternalFromApi(payload) {
     });
 }
 
-function* viewWalletDetails({ payload }) {
+function* viewWalletDetails({payload}) {
   const type = get(payload, "type");
   switch (type) {
     case MODAL_TYPES.commission:

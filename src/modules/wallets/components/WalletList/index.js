@@ -32,6 +32,8 @@ import Misc from "helpers/Misc";
 import SelectPercentOption from "modules/wallets/components/Commission/selectPercentOption";
 import SelectNumberOption from "commons/components/SelectNumberOption";
 import ItemWalletLine from "../ItemWalletLine";
+import SuccessIcon from "assets/images/icon/icon-success.png";
+import CameraIcon from "assets/images/camera-trigger-icon2x.png";
 
 const DEPLAY = 100;
 const previewStyle = {
@@ -75,7 +77,6 @@ const WalletList = (props) => {
   const [searchAddress, setSearchAddress] = useState("");
   const wallets = useSelector((state) => state?.profile?.profileData?.walletListFilter) || [];
   const viewItem = useSelector((state) => state?.wallets?.viewItem);
-  console.log(viewItem);
   const commissionsEarned = useSelector((state) => state?.profile?.profileData?.commissions_earned);
 
   const { tradingPrice } = useSelector((state) => state.wallets) || {
@@ -552,7 +553,7 @@ const WalletList = (props) => {
                         id: "wallet.address",
                       })}
                       width={20}
-                      src={require("assets/images/camera-trigger-icon2x.png")}
+                      src={CameraIcon}
                     />
                   </div>
                 }
@@ -615,7 +616,7 @@ const WalletList = (props) => {
                 value={waletSelect?.label}
                 size="small"
                 autoComplete="off"
-                prefix={<img src={waletSelect?.logo} alt="" width={39} height={39} />}
+                prefix={<img src={waletSelect?.logo.default} alt="" width={39} height={39} />}
                 ref={inputRefSelectWallet}
                 onFocus={() => setShowSelectWallet(true)}
                 onBlur={async () => {
@@ -851,7 +852,7 @@ const WalletList = (props) => {
         footer={false}
       >
         <div className="modal-content-success">
-          <img src={require("assets/images/icon/icon-success.png")} alt="" width={100} />
+          <img src={SuccessIcon} alt="" width={100} />
           <div className="modal-message-success mt-20">
             <FormattedMessage id={"Success"} />
           </div>

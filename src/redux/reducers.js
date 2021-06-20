@@ -7,6 +7,7 @@ import { BountySpwReducer } from "../modules/bountySPW";
 import { AuthReducer } from "../modules/auth";
 import { TransactionReducer } from "../modules/transactions";
 import { BuyOfferReducer } from "modules/BuyOffer";
+import { WalletReducer } from "modules/wallets";
 
 export default combineReducers ({
     auth: AuthReducer,
@@ -16,4 +17,5 @@ export default combineReducers ({
     bounty: BountySpwReducer,
     transactions: TransactionReducer,
     buyOffer: BuyOfferReducer,
+    wallets: WalletReducer,
 });

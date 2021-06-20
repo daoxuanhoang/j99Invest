@@ -61,7 +61,7 @@ const Index = ({ intl }) => {
               <InputCopy
                 code={refCode}
                 // accessCopy={userInfo?.invest_stake >= MIN_STAKE_OF_REF}
-                link={userInfo?.invest_stake < MIN_STAKE_OF_REF ? "/stake" : null}
+                // link={userInfo?.invest_stake < MIN_STAKE_OF_REF ? "/stake" : null}
               />
             </div>
           </Col>

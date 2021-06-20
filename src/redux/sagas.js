@@ -6,6 +6,7 @@ import { AuthSaga } from "../modules/auth";
 import { ProfileSaga } from "../modules/profile";
 import { TransactionSaga } from "../modules/transactions";
 import { BuyOfferSaga } from "modules/BuyOffer";
+import { WalletSaga } from "modules/wallets";
 
 export default function* rootSaga() {
  yield all([
@@ -16,5 +17,6 @@ export default function* rootSaga() {
      ProfileSaga(),
      TransactionSaga(),
      BuyOfferSaga(),
+     WalletSaga(),
  ]);
 }

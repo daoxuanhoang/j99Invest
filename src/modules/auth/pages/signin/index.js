@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Login from "../../../../assets/images/signin/Group505.png";
 import "./styles.scss";
 import { Card, Button, Input, Form } from "antd";
+import { get } from "lodash";
 import { FormattedMessage, injectIntl } from "react-intl";
 import { useDispatch } from "react-redux";
 import { postLogin } from "../../redux/actions";
@@ -21,8 +22,17 @@ const SignInPage = ({ location, history }) => {
   const [labelExpiredTime, setLabelExpiredTime] = useState("");
   const onFinish = (values) => {
     dispatch(
-      postLogin(values)
-    )
+      postLogin(values, (data) => {
+        if (get(location, "state.from")) {
+          const pathName = get(location, "state.from.pathname");
+          const search = get(location, "state.from.search");
+          history.push(`${pathName}${search}`);
+          return;
+        } else {
+          history.push(ROUTE.DASHBOARD);
+        }
+      })
+    );
   }
   useEffect(() => {
     if (process.env.REACT_APP_ENV === PRODUCTION) {

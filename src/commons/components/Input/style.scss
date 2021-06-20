@@ -1,0 +1,25 @@
+@import "assets/css/variables";
+
+.custom-input {
+  font-size: 15px !important;
+  color: $input-text !important;
+  border-color: $input-border !important;
+}
+.custom-input.ant-input:focus,
+.custom-input.ant-input-focused {
+  box-shadow: $input-boxShadow !important;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+input.custom-input::placeholder {
+  color: $input-placeholder;
+  opacity: 1; /* Firefox */
+}
+/* Internet Explorer 10-11 */
+input.custom-input:-ms-input-placeholder {
+  color: $input-placeholder;
+}
+/* Microsoft Edge */
+input.custom-input::-ms-input-placeholder {
+  color: $input-placeholder;
+}

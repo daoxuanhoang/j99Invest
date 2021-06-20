@@ -4,11 +4,11 @@ import { Row, Col } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { injectIntl } from "react-intl";
-// import { getCountCommission, getCountMembers } from "modules/networks/redux/actions";
+import { getCountCommission, getCountMembers } from "modules/networks/redux/actions";
 import { get, isEmpty } from "lodash";
 import ReferalsCard from "commons/components/ReferalsCard/index";
-import BlogReviews from "../components/BountyList/BountyList";
-// import { getListStakeDashboard } from "../redux/actions";
+import BlogReviews from "../components/BountyList/BountyItem";
+import { getListStakeDashboard } from "../redux/actions";
 import MyBalance from "modules/wallets/pages";
 import { getListBounty } from "modules/bountySPW/redux/actions";
 import InviteFriendIcon from "assets/images/three-person.png";
@@ -25,20 +25,20 @@ const Index = ({ intl }) => {
   }));
   const { listBounty } = useSelector((state) => state.bounty);
 
-//   useEffect(() => {
-//     dispatch(
-//       getCountMembers({
-//         customer_id: profileData?.userInfo?.id,
-//       })
-//     );
-    // dispatch(getCountCommission());
-    // dispatch(
-    //   getListStakeDashboard(null, (value) => {
-    //     setDataStake(value);
-    //   })
-    // );
+  // useEffect(() => {
+  //   dispatch(
+  //     getCountMembers({
+  //       customer_id: profileData?.userInfo?.id,
+  //     })
+  //   );
+  //   dispatch(getCountCommission());
+  //   dispatch(
+  //     getListStakeDashboard(null, (value) => {
+  //       setDataStake(value);
+  //     })
+  //   );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-//   }, [dispatch]);
+  // }, [dispatch]);
   useEffect(() => {
     dispatch(getListBounty({}, () => {}));
   }, []);
