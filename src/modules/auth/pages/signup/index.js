@@ -3,15 +3,16 @@ import { Card, Form, Input, Button } from "antd";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
-import Logo from "../../../../assets/images/signin/Group505.png";
 
-import { ROUTE } from "../../../../commons/constants";
-import * as actions from "../../../../modules/auth/redux/actions";
+import { ROUTE } from "commons/constants";
+import * as actions from "modules/auth/redux/actions";
 import "./styles.scss";
 import { isEmpty } from "lodash";
+import { regexEmail } from "../forgot";
+import background from "assets/images/signin/Group505.png";
 
-export const regexEmail = () => {
-  return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@[^|\;:_=+{}'",.?/~`!@#$%^&*<>()[\]\\-]((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const regexNumber = () => {
+  return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 };
 
 const SignUpPage = ({ history, location }) => {
@@ -43,7 +44,7 @@ const SignUpPage = ({ history, location }) => {
     delete values.confirm_password;
     dispatch(
       actions.postSignup(values, () => {
-        history.push(ROUTE.SIGNIN);
+        history.push(ROUTE.LOGIN);
       })
     );
   };
@@ -64,7 +65,7 @@ const SignUpPage = ({ history, location }) => {
   return (
     <div className="register">
       <div className="register-left">
-        <img src={Logo} />
+        <img src={background} />
       </div>
       <div className="register-right">
         <Card title={<FormattedMessage id="auth.signup.modal.title" />} className="card-register-custom">
@@ -200,6 +201,10 @@ const SignUpPage = ({ history, location }) => {
                       required: true,
                       message: <FormattedMessage id="auth.signup.modal.empty.message.mobile" />,
                     },
+                    {
+                      pattern: regexNumber(),
+                      message: <FormattedMessage id="mobileWrong" />,
+                    },
                   ]}
                 >
                   <Input className="input-field" />
@@ -220,10 +225,10 @@ const SignUpPage = ({ history, location }) => {
             </Form.Item>
 
             <Form.Item className="link-href">
-              <Link className="forgot-button" to={`${ROUTE.FORGOT_PASSWORD}`.replace("//", "/")}>
+              <Link className="forgot-button" to={`${ROUTE.FORGOT_PASSWORD}`}>
                 <FormattedMessage id="auth.signin.modal.forgot.password.label" />
               </Link>
-              <Link className="sign-up-link" to={`${ROUTE.LOGIN}`.replace("//", "/")}>
+              <Link className="sign-up-link" to={`${ROUTE.LOGIN}`}>
                 <FormattedMessage id="auth.signin.modal.login.label" />
               </Link>
             </Form.Item>

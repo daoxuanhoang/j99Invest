@@ -1,0 +1,55 @@
+@import "assets/css/variables";
+
+.form-authen {
+  .form-title {
+    font-size: 22px;
+    font-family: $base-font;
+    color: $text-3;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .box-btn {
+    .btn-info {
+      color: #8b8b8b;
+      padding: 10px 0 20px;
+    }
+    margin-top: 28px;
+    .btn-form button {
+      min-height: 45px;
+    }
+  }
+  .position-relative {
+    position: relative;
+  }
+  .form-item {
+    width: 100%;
+    input {
+      padding-right: 155px;
+    }
+  }
+  .btn-form-email {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translate(-2%, -50%);
+    text-align: end;
+    button {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: linear-gradient(90deg, #ffbe7b 0%, #ff9a33 90%);
+
+      padding: 0;
+      min-width: 85px;
+      height: 30px;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .form-authen {
+    .btn-form-email {
+      position: unset;
+    }
+  }
+}

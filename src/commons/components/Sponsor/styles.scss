@@ -1,0 +1,27 @@
+.sponsor {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0px 16px;
+  width: 300px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px !important;
+  box-shadow: 10px 10px 25px -10px rgba(0, 0, 0, 0.5);
+  margin-right: 30px;
+  margin-left: 20px;
+  background-image: url("../../../assets/images/background/br-card.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  .label {
+    color: #fff;
+    font-size: 20px;
+  }
+  .fullname {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 10px;
+    opacity: 0.8;
+  }
+}

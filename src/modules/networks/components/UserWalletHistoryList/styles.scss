@@ -1,0 +1,113 @@
+@import "assets/css/variables";
+
+.COMPLETED-status {
+  color: $success-color;
+}
+.PENDING_REVIEW-status,
+.PENDING_VERIFY_CODE-status {
+  color: $error-text;
+  border: 1px solid $wallet-border;
+  border-radius: 13px;
+  padding: 5px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.wallet-list-container {
+  .table-wrapper {
+    .section-title {
+      max-width: 100%;
+      color: #fff;
+    }
+    .ant-table-wrapper {
+      margin-top: 20px;
+    }
+    .btn-load-more {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      .btn-primary {
+        width: unset;
+        display: flex;
+        padding: 8px 30px;
+      }
+    }
+    .ant-row {
+      .text-right {
+        .icon-flex-end {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+.border-history-total {
+  border-bottom: 2px solid #4b6583;
+  padding-bottom: 7px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.table-wrapper {
+  border-radius: 20px;
+  .ant-table {
+    background: transparent;
+    .ant-table-thead {
+      tr {
+        th.ant-table-cell {
+          background: transparent;
+          color: $main-white;
+          font-size: 20px;
+          border-bottom: 1px dashed #f0f0f0;
+        }
+      }
+    }
+    .ant-table-tbody {
+      tr {
+        td.ant-table-cell {
+          background: transparent;
+          border-bottom: 1px dashed #f0f0f0;
+          color: $main-white;
+          div {
+            span {
+              display: inline-block;
+              span {
+                display: inline-block;
+                margin-left: 12px;
+              }
+            }
+          }
+        }
+        &:hover {
+          td.ant-table-cell {
+            background: transparent;
+            border-bottom: 1px dashed #f0f0f0;
+            color: $main-white;
+          }
+        }
+        button {
+          width: unset;
+          span {
+            margin-left: 0 !important;
+          }
+          &.small {
+            font-size: 12px;
+            padding: 0 10px;
+          }
+          img {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.unlock_stake {
+  color: #8effb1;
+}

@@ -4,6 +4,8 @@ export const S3_IMAGE_ROOT = process.env.S3_IMAGE_ROOT || "https://s3.ap-southea
 export const TOKEN = "token";
 export const TRONSCAN_TRANSACTION = "https://tronscan.org/#/transaction";
 
+export const CACHE_TOKEN = "token";
+export const CACHE_USER_INFO = "userInfo";
 export const ROUTE_REPORT = "/report";
 export const ROUTE = {
   DASHBOARD: "/dashboard",

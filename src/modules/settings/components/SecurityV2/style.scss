@@ -1,0 +1,97 @@
+@import "assets/css/variables";
+
+.securityV2-container {
+  color: $text;
+  font-size: 20px;
+  .securityV2-content {
+    display: flex;
+  }
+  .right {
+    margin: auto;
+    padding: 30px;
+  }
+  .google-security {
+    padding: 25px 0;
+    align-items: center;
+  }
+  .gmail-security {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .gmail-security-left {
+    display: flex;
+    align-items: center;
+  }
+}
+
+button.button-disable {
+  color: $button-text;
+  background: $button-bg;
+  border: 1px solid $button-border;
+  border-radius: 5px;
+  &:hover,
+  &:active,
+  &:focus,
+  &:valid {
+    color: $button-text;
+    background: $button-bg;
+    border: 1px solid $button-border;
+  }
+}
+
+button.button-activated {
+  color: #fff;
+  background: #b7b7b7;
+  border: 1px solid #b7b7b7;
+  border-radius: 5px;
+  cursor: not-allowed;
+  &:hover,
+  &:active,
+  &:focus,
+  &:valid {
+    color: #fff;
+    background: #b7b7b7;
+    border: 1px solid #b7b7b7;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .securityV2-container {
+    .securityV2-content {
+      flex-direction: column;
+    }
+    .left {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .securityV2-container {
+    .google-security {
+      flex-direction: column;
+      img {
+        width: 40px;
+      }
+      span {
+        font-size: 15px;
+      }
+    }
+    .gmail-security {
+      flex-direction: column;
+      img {
+        width: 40px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .left {
+      text-align: center;
+    }
+  }
+}

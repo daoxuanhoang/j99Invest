@@ -1,0 +1,102 @@
+@import "assets/css/variables";
+
+.form-info {
+  .box-btn {
+    margin-top: 30px;
+    .btn-form button {
+      min-height: 45px;
+    }
+  }
+}
+
+.input-field {
+  .ant-picker {
+    .ant-picker-input-placeholder {
+      input {
+        color: $input-text-2;
+      }
+    }
+  }
+}
+
+.input-field {
+  .input-field-label {
+    margin-bottom: 7px;
+    label {
+      font-size: 16px;
+      font-family: $base-font;
+      color: $input-label-2;
+      font-weight: 600;
+    }
+  }
+  .ant-form-item {
+    margin-bottom: 20px;
+    .ant-select-selector,
+    input {
+      font-size: 18px;
+      color: $input-text-2;
+      font-family: $base-font;
+      background-color: $input-bg-2 !important;
+
+      min-height: 45px;
+      border-radius: 4px !important;
+      border: 0px;
+      border: 0px;
+      align-items: center;
+      border: unset !important;
+    }
+    // icon select
+    .ant-select-arrow {
+      color: #fff;
+    }
+    .ant-form-item-explain-error {
+      position: absolute;
+      bottom: -24px;
+      left: 0;
+    }
+    ::placeholder {
+      color: #ffffff;
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #ffffff;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #ffffff;
+    }
+  }
+  // orth input password
+  // orth input picked
+  .ant-picker,
+  .ant-input-affix-wrapper {
+    font-size: 18px;
+    color: $input-text-2;
+    background-color: $input-bg-2;
+
+    border: 0px;
+    padding: 0 20px 0 10px !important;
+    input {
+      background: unset !important;
+    }
+    span {
+      color: #ffffff;
+      cursor: pointer;
+    }
+    .ant-picker-clear {
+      display: none;
+    }
+  }
+}
+
+.btn-pega {
+  font-size: 18px !important;
+  font-family: $base-font;
+  color: $button-text !important;
+  background: $button-bg !important;
+  border: 1px solid $button-border !important;
+  border-radius: 4px !important;
+}

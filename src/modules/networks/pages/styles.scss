@@ -1,0 +1,111 @@
+@import "assets/css/variables";
+
+$color-1: rgba(
+  $color: #f92c41,
+  $alpha: 0.2,
+);
+
+.networks-page {
+  .networks-body {
+    width: 100%;
+    min-height: 550px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .networks-header {
+    padding-left: 50px;
+    .btn-active .box-btn-item {
+      background: $color-1;
+    }
+    .networks-title-right {
+      color: #ffffff;
+      font-size: 18px;
+      text-align: end;
+      margin-top: 3px;
+    }
+  }
+  .networks-content {
+    min-height: 80vh;
+    padding: 15px 40px;
+    border-radius: 6px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .networks-page {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .networks-page {
+    padding: 15px 0;
+    .networks-title-right {
+      display: none;
+    }
+  }
+  .binary-pv,
+  .revenue {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .networks-page {
+    padding: 0;
+    .networks-content {
+      padding: 15px;
+      border-radius: 0 0 6px 6px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .ant-row-center {
+    justify-content: start !important;
+    .yor-ref,
+    .binary-pv,
+    .binary {
+      margin-top: 10px;
+    }
+    .binary-pv h2 {
+      overflow-wrap: break-word;
+      padding: 2px;
+    }
+  }
+  .binary {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 540px) {
+  .yor-ref,
+  .general {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .networks-page {
+    .networks-header {
+      padding-left: 0;
+    }
+    .networks-content {
+      padding: 15px;
+      border-radius: 0 0 6px 6px;
+    }
+  }
+  .yor-ref,
+  .general {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .networks-page {
+    font-size: 12px;
+    .card-referals-title {
+      font-size: 14px;
+    }
+  }
+}

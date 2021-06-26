@@ -30,17 +30,17 @@ const Index = ({ intl }) => {
   }, [intl, link, userInfo]);
   // End Handle ref
 
-  const onCloseModalInvite = () => {
-    setShowModalInvite(false);
-  };
+  // const onCloseModalInvite = () => {
+  //   setShowModalInvite(false);
+  // };
 
-  const onInviteFriend = (values) => {
-    dispatch(
-      inviteFriend(values, () => {
-        onCloseModalInvite();
-      })
-    );
-  };
+  // const onInviteFriend = (values) => {
+  //   dispatch(
+  //     inviteFriend(values, () => {
+  //       onCloseModalInvite();
+  //     })
+  //   );
+  // };
 
   const copyReferralLink = (code) => {
     navigator.clipboard.writeText(code);

@@ -1,0 +1,35 @@
+@import "assets/css/variables";
+.mode-drawer-custom {
+  .ant-drawer-header {
+    display: none;
+  }
+  .ant-drawer-header,
+  .ant-drawer-body,
+  .ant-drawer-wrapper-body {
+    background-color: $aside-menu-color;
+    .ant-drawer-title,
+    .ant-drawer-close {
+      color: #fff;
+      display: none;
+    }
+  }
+  .ant-drawer-header {
+    margin: 10px 15px;
+    padding-left: 0px;
+  }
+  .ant-drawer-title {
+    width: calc(100% - 10px);
+  }
+}
+
+@media (min-width: 768px) {
+  .mode-drawer-custom {
+    .ant-drawer-header {
+      margin: 10px 50px;
+    }
+  }
+}
+
+.ant-drawer-body::-webkit-scrollbar {
+  display: none;
+}

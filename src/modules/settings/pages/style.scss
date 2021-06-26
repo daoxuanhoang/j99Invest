@@ -1,0 +1,98 @@
+@import "assets/css/variables";
+
+$bg: #ffffff;
+$text: #000000;
+$box-shadow: 0 0 8px 1px #dddddd;
+
+.setting-page {
+  .ant-form-item-has-error,
+  .ant-input-affix-wrapper {
+    background: $input-bg-2 !important;
+    border-radius: 4px;
+  }
+  .setting-body {
+    width: 100%;
+    min-height: 550px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .setting-header {
+    .btn-active .box-btn-item {
+      background: #fff;
+    }
+    .ant-col {
+      margin-right: 30px;
+    }
+  }
+  .setting-content {
+    background: $bg;
+    box-shadow: $box-shadow;
+
+    padding: 40px;
+    border-radius: 6px;
+    .form-title {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .setting-page {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 1119px) {
+  .setting-page {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .setting-page {
+    padding: 0;
+    .setting-content {
+      padding: 15px;
+      border-radius: 0 0 6px 6px;
+    }
+  }
+  .comming-soon {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .personal-detail-setting-box,
+  .auth-setting-box,
+  .security-setting-box {
+    margin-bottom: 10px;
+  }
+  .setting-header {
+    .ant-col {
+      margin-right: auto !important;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .two-factor-setting-box {
+    margin-top: 10px;
+  }
+  .security-setting-box {
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  .kyc-setting-box,
+  .security-setting-box {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .kyc-setting-box,
+  .security-setting-box {
+    margin-top: 0px;
+  }
+}

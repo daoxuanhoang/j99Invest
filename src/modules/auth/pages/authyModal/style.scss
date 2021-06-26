@@ -1,0 +1,66 @@
+@import "assets/css/variables";
+
+.custom-modal {
+  .ant-modal-content {
+    .ant-modal-close {
+      .ant-modal-close-x {
+        color: $modal-close-x;
+      }
+    }
+    .ant-modal-header {
+      font-size: 20px;
+      font-weight: 400;
+      .ant-modal-title {
+        color: $main-color;
+      }
+    }
+
+    .ant-modal-body {
+      color: $main-color;
+      .canvas-qrcode {
+        width: 100%;
+        text-align: center;
+        canvas {
+          border: 5px solid #fff;
+        }
+      }
+    }
+    .ant-modal-footer {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      .btn-submit {
+        height: auto;
+        font-size: 27px;
+        color: $main-color;
+        padding: 0;
+        width: 100%;
+      }
+    }
+    .ant-modal-footer .modal-footer-label {
+      color: #fff;
+      font-size: 15px;
+      text-align: center;
+      padding: 5px 15px;
+      margin-top: 0px !important;
+      border: #fff 1px solid;
+      border-radius: 5px;
+    }
+  }
+  .canvas-qrcode {
+    border-radius: 6px;
+    padding-bottom: 18px;
+  }
+  .address-coppy {
+    padding: 5px 0 20px;
+  }
+}
+.icon-withdraw {
+  width: 24px;
+}
+.get-code {
+  display: block;
+  margin-top: -10px;
+  text-align: center;
+  color: #e91e63;
+}

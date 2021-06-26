@@ -1,3 +1,6 @@
-import NetwordSaga from "./redux/sagas";
+import NetworkSaga from "./redux/sagas";
+import NetWorkPage from "./pages";
+import NetWorkReducer from "./redux/reducer";
 
-export { NetwordSaga };
+export { NetWorkPage };
+export { NetworkSaga, NetWorkReducer };

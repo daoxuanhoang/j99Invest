@@ -8,6 +8,8 @@ import { AuthReducer } from "../modules/auth";
 import { TransactionReducer } from "../modules/transactions";
 import { BuyOfferReducer } from "modules/BuyOffer";
 import { WalletReducer } from "modules/wallets";
+import { NetWorkReducer } from "modules/networks";
+import { SettingReducer } from "modules/settings";
 
 export default combineReducers ({
     auth: AuthReducer,
@@ -18,4 +20,6 @@ export default combineReducers ({
     transactions: TransactionReducer,
     buyOffer: BuyOfferReducer,
     wallets: WalletReducer,
+    networks: NetWorkReducer,
+    settings: SettingReducer,
 });

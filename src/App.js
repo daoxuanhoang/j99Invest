@@ -15,9 +15,11 @@ import { DashboardPage } from "modules/dashboard";
 import { getProfile } from "modules/profile/redux/actions";
 import { PrivateLayout, PublicLayout } from "commons/layouts";
 import { ROUTE, TOKEN} from "commons/constants";
-import { SignInPage, SignUpPage } from "modules/auth";
+import { SignInPage, SignUpPage, ForgotPasswordPage, ActivePage, NewPasswordPage, ChangeEmailPage } from "modules/auth";
 import { getRate } from "modules/dashboard/redux/actions";
 import BountyPage from "modules/bountySPW";
+import { NetWorkPage } from "modules/networks";
+import { SettingPage } from "modules/settings";
 
 const isLogin = () => {
   const authToken = Cookies.get(TOKEN);
@@ -107,9 +109,15 @@ const App = () => {
 
           {/* No Exact */}  
           <PrivateRoute path={ROUTE.BOUNTY_SPW} component={BountyPage} />
+          <PrivateRoute path={ROUTE.NETWORKS} component={NetWorkPage} />
+          <PrivateRoute path={ROUTE.SETTING} component={SettingPage} />
           {/* Public */}
           <PublicRoute exact path={ROUTE.LOGIN} component={SignInPage} />
           <PublicRoute exact path={ROUTE.SIGNUP} component={SignUpPage} />
+          <PublicRoute exact path={ROUTE.ACTIVE} component={ActivePage} />
+          <PublicRoute exact path={ROUTE.RESET_PASSWORD} component={NewPasswordPage} />
+          <PublicRoute exact path={ROUTE.FORGOT_PASSWORD} component={ForgotPasswordPage} />
+          {!isLogin() && <PublicRoute exact restricted={false} path={ROUTE.CHANGE_EMAIL} component={ChangeEmailPage} />}
         </Router>
       </IntlProvider>
     </div>
